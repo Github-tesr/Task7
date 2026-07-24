@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* CSS Variables */
+:root{
+    --primary-color:#1ea5ff;
+    --bg-color:white;
+    --text-color:#4a5868;
+
+    --mobile:767px;
+    --tablet:1023px;
+}
+
+body{
+    background:var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    color:var(--text-color);
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary-color);
+}
+.menu a{
+    margin-left:20px;
+    text-decoration:none;
+    color:var(--text-color);
+    font-size:16px;
+    font-weight:bold;
+}
+.user-btn{
+    padding:12px 20px;
+    background:var(--primary-color);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px 80px;
+    gap:50px;
+}
+.left-content{
+   
+    gap:20px;
+}
+.left-content h1{
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    font-size:80px;
+    gap:20px;
+}
+.left-content p{
+    font-size:25px;
+    line-height:1.5;
+}
+button{
+    padding:15px 25px;
+    background:var(--primary-color);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:20px;
+}
+
+/* ==========================
+   Tablet Devices
+   768px - 1023px
+========================== */
+
+@media (min-width:768px) and (max-width:1023px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    .menu a{
+        font-size:14px;
+    }
+
+    .user-btn{
+        padding:10px 15px;
+        font-size:14px;
+    }
+
+    .hero{
+        display:flex;
+        flex-direction:column;
+        padding:30px 40px;
+        gap:30px;
+    }
+
+    .left-content h1{
+        font-size:36px;
+    }
+
+    .left-content p{
+        font-size:18px;
+    }
+
+    .right-content img{
+        max-width:320px;
+    }
+}
+
+/* ==========================
+   Mobile Devices
+   0px - 767px
+========================== */
+
+@media (max-width:767px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:25px;
+        gap:30px;
+    }
+
+    .left-content{
+        align-items:center;
+    }
+
+    .left-content h1{
+        font-size:32px;
+    }
+
+    .left-content p{
+        font-size:16px;
+    }
+
+    .right-content img{
+        max-width:280px;
+        height:auto;
+    }
+}
